@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Dashboard</title>
+    
+    <!-- Bootstrap & FontAwesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        
+        .dashboard-container {
+            
+            display: flex;
+            margin: 60px; /* Reduced top margin */
+            padding-bottom: 0; /* Ensure no extra padding */
+
+        }
+        
+        .sidebar {
+            width: 250px;
+            background-color: #f8f9fa;
+            padding: 0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+            transition: 0.3s;
+        }
+        .sidebar a i {
+            font-size: 18px;
+        }
+        .sidebar a:hover, .sidebar .active {
+            background-color: #166556;
+            color: white;
+        }
+        .sidebar a:hover i, .sidebar .active i {
+            color: white;
+        }
+        .content {
+            height :150px;
+            background-color: white;
+            border: 1px solid #ddd;
+            margin-left: 20px;
+            border-radius: 5px;
+          
+        }
+        .content p{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./image/logo.png" alt="AchieversIT Logo" height="50px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">Shop</a></li>
+                    <li class="nav-item"><a href="#" style="color: teal;">My Account</a></li>
+                    <li class="nav-item"><a href="#">Compare</a></li>
+                    <li class="nav-item"><a href="#">Login</a></li>
+                    <li class="nav-item">
+                        <div class="input-group search-box">
+                            <input type="text" class="form-control border-0" placeholder="Search For Items...">
+                            <span class="input-group-text bg-white border-0">
+                                <i class="fas fa-search text-muted"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="nav-item icon-container">
+                        <i class="far fa-heart fa-lg"></i>
+                        <span class="badge">3</span>
+                    </li>
+                    <li class="nav-item icon-container">
+                        <i class="fas fa-shopping-bag fa-lg"></i>
+                        <span class="badge">3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar">
+                <a href="#" class="active"><i class="fa-solid fa-sliders"></i> Dashboard</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> Orders</a>
+                <a href="#"><i class="fa-regular fa-user"></i> Update Profile</a>
+                <a href="#"><i class="fa-solid fa-location-dot"></i> My Address</a>
+                <a href="#"><i class="fa-solid fa-sliders"></i> Change Password</a>
+                <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h2 style="background-color: rgb(206, 204, 204); padding: 10px;">Hello Rosie</h2>
+            <p>From your account dashboard, you can easily check & view your recent order, manage your shipping and billing addresses, and edit your password and account details.</p>
+        </div>
+    </div>
+
+         <!-- Newsletter Section -->
+         <div class="newsletter-container">
+            <div class="newsletter-text">
+                <span><i class="fa-solid fa-envelope fa-2x me-2"></i>Sign in to Newsletter</span>
+                <span class="subtext">...and receive <strong>$25 coupon</strong> for first shopping.</span>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter Your Email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        
+    <!--footer-->
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>
+                            <span style="color:blue">
+                                <img src="./image/logo.png" alt="AchieversIT Logo" width="auto" height="50px">
+                            </span>
+                        </h5>
+                        <p><strong>Address:</strong> 13 Tlemcen Road, Street 32, Beb-Wahren</p>
+                        <p><strong>Phone:</strong> +01 2222 365 / (+91) 01 2345 6789</p>
+                        <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+                        <p>Follow Me</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Address</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Delivery Information</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Support Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h5>My Account</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">View Cart</a></li>
+                            <li><a href="#">My Wishlist</a></li>
+                            <li><a href="#">Track My Order</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Order</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Secured Payment Gateways</h5>
+                        <img src="../image/payment-method.png" alt="Payment Methods">
+                    </div>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <span>&copy; 2024 ADARSHA. All rights reserved</span>
+                    <span>Designed by ADARSHA A</span>
+                </div>
+            </div>
+        </footer>
+
+        
+</body>
+</html>
