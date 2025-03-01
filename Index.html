@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Trending</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+
+}
+        h4 {
+            color: #2c3e50;
+        }
+        .product-item {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        .product-item img {
+            border-radius: 5px;
+            width: 80px;
+            height: auto;
+        }
+        .text-success {
+            font-size: 1.2rem;
+        }
+        hr {
+            border: 1px solid #2c3e50;
+        }
+
+.deal-card {
+            background: #eaf6f6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .deal-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .deal-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #146c94;
+        }
+        .price {
+            color: red;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: gray;
+            margin-left: 10px;
+        }
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .timer div {
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .shop-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #146c94;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .shop-btn:hover {
+            background-color: #0f4f6f;
+        }
+
+        .button{
+            background-color:rgb(3, 118, 118);
+            height: 50px;
+            color: white;
+            border-radius: 5px;
+            width: 130px;
+
+        }
+        .hero-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        
+        .category-card, .product-card {
+            border: 1px solid #e3e3e3;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 10px;
+            background: #fff;
+        }
+        .category-card img, .product-card img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .btn-filter {
+            border-radius: 10px;
+            padding: 10px 20px;
+            border: none;
+            margin: 5px;
+        }
+        .btn-featured { background-color: #f8d7a2; }
+        .btn-popular { background-color: #d1d3d4; }
+        .btn-new { background-color: #c6c8ca; }
+        .product-card img {
+            width: 150px;
+            height: auto;
+        }
+        .badge-hot { background-color: #ff7675; padding: 5px; border-radius: 5px; color: white; }
+        .badge-new { background-color: #55efc4; padding: 5px; border-radius: 5px; color: white; }
+    </style>
+</head>
+<body>
+
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg bg-white shadow-sm px-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./image/logo.png" alt="AchieversIT Logo" height="50px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="Shop.html">Shop</a></li>
+                    <li class="nav-item"><a href="Account.html">My Account</a></li>
+                    <li class="nav-item"><a href="campare.html" style=" color: teal;">Compare</a></li>
+                    <li class="nav-item"><a href="Login.html">Login</a></li>
+                    <li class="nav-item">
+                        <div class="input-group search-box">
+                            <input type="text" class="form-control border-0" placeholder="Search For Items...">
+                            <span class="input-group-text bg-white border-0">
+                                <i class="fas fa-search text-muted"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="nav-item icon-container">
+                        <i class="far fa-heart fa-lg"></i>
+                        <span class="badge">3</span>
+                    </li>
+                    <li class="nav-item icon-container">
+                        <i class="fas fa-shopping-bag fa-lg"></i>
+                        <span class="badge">3</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row hero-section align-items-center">
+            <div class="col-md-6">
+                <h6 style="color: rgb(3, 118, 118);"Hot Promotions</h6>
+                <h2><strong>Fashion Trending</strong></h2>
+                <h1 style="color: rgb(3, 118, 118);"><b>Great Collection</b></h1>
+                <p>Save more with coupons & up to 20% off</p>
+                <button class ="button" >Shop Now</button>
+            </div>
+            <div class="col-md-6">
+                <img src="image/home-img.png" class="img-fluid" alt="Fashion Collection">
+            </div>
+        </div>
+
+        <h3 class="mt-5"><span class="text-success">Popular</span> Categories</h3>
+       
+        <div class="container mt-5">
+            <div class="row d-flex flex-nowrap overflow-auto">
+                <div class="col">
+                    <div class="category-card position-relative">
+                        <img src="image/product-1-1.jpg" alt="T-Shirt">
+                        <p>T-Shirt</p>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="category-card position-relative">
+                        <img src="image/product-13-2.jpg" alt="Bags">
+                        <p>Bags</p>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="category-card position-relative">
+                        <img src="image/product-10-2.jpg" alt="Sandal">
+                        <p>Sandal</p>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="category-card position-relative">
+                        <img src="image/showcase-img-4.jpg" alt="Scarf Cap">
+                        <p>Scarf Cap</p>
+                    </div>
+                </div>
+        
+                <div class="col">
+                    <div class="category-card position-relative">
+                        <img src="image/product-3-1.jpg" alt="Shoes">
+                        <p>Shoes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-4">
+                <h4 class="fw-bold">Hot Releases</h4>
+                <hr>
+                <div class="d-flex align-items-center mb-3 product-item">
+                    <img src="image/showcase-img-1.jpg" class="me-3" alt="Product">
+                    <div>
+                        <p class="mb-1">Floral Print Casual Cotton Dress</p>
+                        <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3 product-item">
+                    <img src="image/showcase-img-2.jpg" class="me-3" alt="Product">
+                    <div>
+                        <p class="mb-1">Ruffled Solid Long Sleeve Blouse</p>
+                        <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3 product-item">
+                    <img src="image/showcase-img-3.jpg" class="me-3" alt="Product">
+                    <div>
+                        <p class="mb-1">Multicolor Print V-neck T-shirt</p>
+                        <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4 class="fw-bold">Deals & Outlet</h4>
+                <hr>
+                <div class="d-flex align-items-center mb-3 product-item">
+                    <img src="image/showcase-img-4.jpg" class="me-3" alt="Product">
+                    <div>
+                        <p class="mb-1">Fish Print Patched T-shirt</p>
+                        <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3 product-item">
+                    <img src="image/showcase-img-5.jpg" class="me-3" alt="Product">
+                    <div>
+                        <p class="mb-1">Vintage Floral Print Dress</p>
+                        <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3 product-item">
+                    <img src="image/showcase-img-6.jpg" class="me-3" alt="Product">
+                    <div>
+                        <p class="mb-1">Multicolorstripe Circle T-shirt</p>
+                        <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h4 class="fw-bold">Top Selling</h4>
+                <hr>
+                <div class="d-flex align-items-center mb-3 product-item">
+                    <img src="image/showcase-img-7.jpg" class="me-3" alt="Product">
+                    <div>
+                        <p class="mb-1">Geometric Printed Long Sleeve Blouse</p>
+                        <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3 product-item">
+                    <img src="image/showcase-img-8.jpg" class="me-3" alt="Product">
+                    <div>
+                        <p class="mb-1">Print Patchwork Maxi Dress</p>
+                        <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3 product-item">
+                    <img src="image/showcase-img-9.jpg" class="me-3" alt="Product">
+                    <div>
+                        <p class="mb-1">Daisy Floral Print Straps Jumpsuit</p>
+                        <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
