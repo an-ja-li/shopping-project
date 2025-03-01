@@ -7,17 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
-    <style>
+    <link rel="stylesheet" href="../shop.css">
 
-}
-        h4 {
+    <style>
+         h4 {
             color: #2c3e50;
         }
         .product-item {
             background: white;
             padding: 10px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
         }
         .product-item:hover {
@@ -34,62 +33,6 @@
         hr {
             border: 1px solid #2c3e50;
         }
-
-.deal-card {
-            background: #eaf6f6;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .deal-card img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-        .deal-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #146c94;
-        }
-        .price {
-            color: red;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .old-price {
-            text-decoration: line-through;
-            color: gray;
-            margin-left: 10px;
-        }
-        .timer {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        .timer div {
-            background: #ffffff;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        .shop-btn {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            background-color: #146c94;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        .shop-btn:hover {
-            background-color: #0f4f6f;
-        }
-
         .button{
             background-color:rgb(3, 118, 118);
             height: 50px;
@@ -103,18 +46,21 @@
             padding: 50px 0;
         }
         
-        .category-card, .product-card {
-            border: 1px solid #e3e3e3;
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            margin: 10px;
+        .category-card {
+            border: 1px solid #9de95f;
+            border-radius: 20px;
+            padding: 15px;
             background: #fff;
+            position: relative;
+            cursor: pointer;
+            align-content: center;
+            text-align: center;
         }
-        .category-card img, .product-card img {
-            width: 100px;
+        .category-card img {
+            width: 200px;
             height: auto;
             margin-bottom: 10px;
+            border-radius: 20px
         }
         .btn-filter {
             border-radius: 10px;
@@ -125,12 +71,7 @@
         .btn-featured { background-color: #f8d7a2; }
         .btn-popular { background-color: #d1d3d4; }
         .btn-new { background-color: #c6c8ca; }
-        .product-card img {
-            width: 150px;
-            height: auto;
-        }
-        .badge-hot { background-color: #ff7675; padding: 5px; border-radius: 5px; color: white; }
-        .badge-new { background-color: #55efc4; padding: 5px; border-radius: 5px; color: white; }
+       
     </style>
 </head>
 <body>
@@ -172,7 +113,7 @@
         </div>
     </nav>
 
-
+<!-- dashboard fornt-->
     <div class="container">
         <div class="row hero-section align-items-center">
             <div class="col-md-6">
@@ -187,7 +128,10 @@
             </div>
         </div>
 
-        <h3 class="mt-5"><span class="text-success">Popular</span> Categories</h3>
+
+     <!--popular categories-->
+
+        <h3 class="mt-5"><span style="color: rgb(3, 118, 118) ;">Popular</span> Categories</h3>
        
         <div class="container mt-5">
             <div class="row d-flex flex-nowrap overflow-auto">
@@ -227,9 +171,117 @@
                 </div>
             </div>
         </div>
+
+        <!--product detail-->
+        <div class="container mt-4">
+            <div class="d-flex justify-content-start">
+                <button class="btn btn-filter btn-featured">Featured</button>
+                <button class="btn btn-filter btn-popular">Popular</button>
+                <button class="btn btn-filter btn-new">New Added</button>
+            </div>
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card position-relative">
+                        <span class="badge bg-danger badge-custom">Hot</span>
+                        <img  src=image/product-1-1.jpg alt="Colorful Shirt">
+                        <img class="hover-img" src="image/product-1-2.jpg" alt="Colorful Shirt">
+                        <h6>Clothing</h6>
+                        <h4><b>Colorful Pattern Shirts</b></h4>
+                        <span style="color: rgb(237, 199, 8); margin-left: 0%;"> <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                        <p><strong class="text-success">$238.85</strong> <del>$245.68</del></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card position-relative">
+                        <span class="badge bg-success badge-custom">Hot</span>
+                        <img src=image/product-2-1.jpg alt="Colorful Shirt">
+                        <img class="hover-img" src="image/product-2-2.jpg" alt="Colorful Shirt">
+                        <h6>Clothing</h6>
+                        <h4><b>Colorful Pattern Shirts</b></h4>
+                        <span style="color: rgb(237, 199, 8); margin-left: 0%;"> <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                        <p><strong class="text-success">$238.85</strong> <del>$245.68</del></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card position-relative">
+                        <span class="badge bg-warning badge-custom">Hot</span>
+                        <img src="\image\product-3-1.jpg" alt="Shoe">
+                        <img class="hover-img" src="image/product-3-2.jpg" alt="Shoe">
+                        <h6>Clothing</h6>
+                        <h4><b>Colorful Pattern Shirts</b></h4>
+                       <span style="color: rgb(237, 199, 8); margin-left: 0%;"> <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                        <p><strong class="text-success">$238.85</strong> <del>$245.68</del></p>
+                    </div>
+                 </div>   
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card position-relative">
+                        <span class="badge bg-warning badge-custom">22%</span>
+                        <img src="image/product-4-1.jpg" alt="Shoe">
+                        <img class="hover-img" src="image/product-4-2.jpg" alt="Shoe">
+                        <h6>Clothing</h6>
+                        <h4><b>Colorful Pattern Shirts</b></h4>
+                        <span style="color: rgb(237, 199, 8); margin-left: 0%;"> <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                        <p><strong class="text-success">$238.85</strong> <del>$245.68</del></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card position-relative">
+                        <span class="badge bg-warning badge-custom">22%</span>
+                        <img src="image/product-5-1.jpg" alt="Shoe">
+                        <img class="hover-img" src="image/product-5-2.jpg" alt="Shoe">
+                        <h6>Clothing</h6>
+                        <h4><b>Colorful Pattern Shirts</b></h4>
+                        <span style="color: rgb(237, 199, 8); margin-left: 0%;"> <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                        <p><strong class="text-success">$238.85</strong> <del>$245.68</del></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card position-relative">
+                        <span class="badge bg-warning badge-custom">22%</span>
+                        <img src="image/product-6-1.jpg" alt="Shoe">
+                        <img class="hover-img" src="image/product-6-2.jpg" alt="Shoe">
+                        <h6>Clothing</h6>
+                        <h4><b>Colorful Pattern Shirts</b></h4>
+                        <span style="color: rgb(237, 199, 8); margin-left: 0%;"> <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                        <p><strong class="text-success">$238.85</strong> <del>$245.68</del></p>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card position-relative">
+                        <span class="badge bg-danger badge-custom">Hot</span>
+                        <img  src="image/product-7-1.jpg" alt="Colorful Shirt">
+                        <img class="hover-img" src="image/product-7-2.jpg" alt="Colorful Shirt">
+                        <h6>Clothing</h6>
+                        <h4><b>Colorful Pattern Shirts</b></h4>
+                        <span style="color: rgb(237, 199, 8); margin-left: 0%;"> <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                        <p><strong class="text-success">$238.85</strong> <del>$245.68</del></p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="product-card position-relative">
+                        <span class="badge bg-success badge-custom">Hot</span>
+                        <img src="image/product-8-1.jpg" alt="Colorful Shirt">
+                        <img class="hover-img" src="image/product-8-2.jpg" alt="Colorful Shirt">
+                        <h6>Clothing</h6>
+                        <h4><b>Colorful Pattern Shirts</b></h4>
+                        <span style="color: rgb(237, 199, 8); margin-left: 0%;"> <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                        <p><strong class="text-success">$238.85</strong> <del>$245.68</del></p>
+                    </div>
+                </div>
+            </div>
+               
+                
+        </div>
+    </div>
+    </div>
+    
+    
         
     
-
+<!--hotrealease   deal & outlet    top selling-->
 
     <div class="container py-5">
         <div class="row">
@@ -311,5 +363,106 @@
         </div>
     </div>
    
+<!--trendy section-->
+
+    <div class="container py-5">
+        <h4 class="fw-bold">Trendy</h4>
+        <hr>
+        <div class="col-md-6">
+            <div class="d-flex align-items-center mb-3 product-item">
+                <img src="image/showcase-img-1.jpg" class="me-3" alt="Product">
+                <div>
+                    <p class="mb-1">Floral Print Casual Cotton</p>
+                    <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mb-3 product-item">
+                <img src="image/showcase-img-2.jpg" class="me-3" alt="Product">
+                <div>
+                    <p class="mb-1">Ruffled Solid Long Sleeve</p>
+                    <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center mb-3 product-item">
+                <img src="image/showcase-img-3.jpg" class="me-3" alt="Product">
+                <div>
+                    <p class="mb-1">Multi-Color Print V-neck</p>
+                    <p class="text-success fw-bold">$238.85 <s class="text-muted">$245.8</s></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- Newsletter Section -->
+ <div class="newsletter-container">
+    <div class="newsletter-text">
+        <span><i class="fa-solid fa-envelope fa-2x me-2"></i>Sign in to Newsletter</span>
+        <span class="subtext">...and receive <strong>$25 coupon</strong> for first shopping.</span>
+    </div>
+    <div class="newsletter-form">
+        <input type="email" placeholder="Enter Your Email">
+        <button>Subscribe</button>
+    </div>
+</div>
+
+<!--footer-->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>
+                    <span style="color:blue">
+                        <img src="./image/logo.png" alt="AchieversIT Logo" width="auto" height="50px">
+                    </span>
+                </h5>
+                <p><strong>Address:</strong> 13 Tlemcen Road, Street 32, Beb-Wahren</p>
+                <p><strong>Phone:</strong> +01 2222 365 / (+91) 01 2345 6789</p>
+                <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+                <p>Follow Me</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5>Address</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Delivery Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Support Center</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5>My Account</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">View Cart</a></li>
+                    <li><a href="#">My Wishlist</a></li>
+                    <li><a href="#">Track My Order</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Order</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>Secured Payment Gateways</h5>
+                <img src="../image/payment-method.png" alt="Payment Methods">
+            </div>
+        </div>
+        <hr>
+        <div class="text-center">
+            <span>&copy; 2024 ADARSHA. All rights reserved</span>
+            <span>Designed by ADARSHA A</span>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
