@@ -1,25 +1,26 @@
-.nav-item{
+.nav-item {
     align-content: center;
     margin-right: 50px;
-   
 }
+
 .navbar-brand img {
     height: 70px;
 }
+
+/* Default nav link styling */
 .nav-item a {
     font-size: 16px;
     font-weight: 500;
     color: black;
-    text-decoration: none;
     margin-right: 15px;
 }
-.nav-item a:hover {
-    color: teal;
+
+.nav-link:hover, 
+.nav-link:focus, 
+.nav-link.active {
+    color: teal !important; /* Change color to teal */
+    text-decoration: none !important; /* Ensure no underline */
 }
-
-/*news letter*/
-
-
 
 .newsletter-container {
     display: flex;
@@ -125,4 +126,314 @@
     margin: 0 10px;
     color: #333;
     font-size: 18px;
+}
+
+/*index.html........................................................................*/
+
+
+h4 {
+    color: #2c3e50;
+}
+.product-item {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+.product-item:hover {
+    transform: translateY(-5px);
+}
+.product-item img {
+    border-radius: 5px;
+    width: 80px;
+    height: auto;
+}
+.text-success {
+    font-size: 1.2rem;
+}
+hr {
+    border: 1px solid #2c3e50;
+}
+.button{
+    background-color:rgb(3, 118, 118);
+    height: 50px;
+    color: white;
+    border-radius: 5px;
+    width: 130px;
+
+}
+.hero-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.category-card {
+    border: 1px solid #9de95f;
+    border-radius: 20px;
+    padding: 15px;
+    background: #fff;
+    position: relative;
+    cursor: pointer;
+    align-content: center;
+    text-align: center;
+}
+.category-card img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 20px
+}
+.btn-filter {
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    margin: 5px;
+}
+.btn-featured { background-color: #f8d7a2; }
+.btn-popular { background-color: #d1d3d4; }
+.btn-new { background-color: #c6c8ca; }
+
+.deal-card {
+    background: #f5f5f5;
+    padding: 40px;
+    border-radius: 10px;
+    height: 450px; /* Same height for both cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: left;
+}
+
+/* Background images */
+.deal-card1 {
+    background-image: url('image/deals-1.jpg');
+}
+.deal-card2 {
+    background-image: url('image/deals-2.png');
+}
+
+.deal-price {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+}
+.deal-old-price {
+    text-decoration: line-through;
+    color: grey;
+}
+.timer {
+    display: flex;
+    gap: 10px;
+}
+.timer div {
+    background: #027f5b;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 50px;
+}
+
+/* Button styling (same as previous code) */
+.shop-btn {
+    background: transparent;
+    border: 2px solid #026660;
+    padding: 10px 20px;
+    color: #026660;
+    width: 150px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+.shop-btn:hover {
+    background: #026660;
+    color: white;
+}
+
+
+
+/* .......................................................campare.html .....................................................................*/
+
+.comparison-table {
+    
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.table thead {
+    background: #f8f9fa;
+}
+.table thead img{
+    height: 350px;
+}
+.table td, .table th {
+    text-align: center;
+    vertical-align: middle;
+}
+.product-image img {
+    width: 100px;
+    height: auto;
+}
+.colors i {
+    font-size: 18px;
+    margin: 0 3px;
+}
+.out-of-stock{
+color: teal;
+}
+.btn-cart {
+    background: teal;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 12px;
+    border: none;
+}
+.btn-cart:hover {
+    background: darkslategray;
+}
+.remove-icon i {
+    color: gray;
+    cursor: pointer;
+}
+.remove-icon i:hover { 
+    color: red;
+}
+
+
+/* ................................................................Login.html............................................................ */
+
+.container {
+    margin: 50px;
+  
+}
+.form-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.btn-custom {
+    background-color:rgb(3, 118, 118);
+    height: 50px;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+/* ...........................................................Account.html.................................................................. */
+        
+.dashboard-container {
+    
+    display: flex;
+    margin: 60px; /* Reduced top margin */
+    padding-bottom: 0; /* Ensure no extra padding */
+
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+}
+.sidebar a i {
+    font-size: 18px;
+}
+.sidebar a:hover, .sidebar .active {
+    background-color: #166556;
+    color: white;
+}
+.sidebar a:hover i, .sidebar .active i {
+    color: white;
+}
+.content {
+    height :150px;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    border-radius: 5px;
+  
+}
+.content p{
+    padding: 10px;
+}
+
+
+/* ..................................................................Shop.html............................................................... */
+
+.product-card {
+    border: 1px solid #9de95f;
+    border-radius: 20px;
+    padding: 15px;
+    background: #fff;
+    position: relative;
+    cursor: pointer;
+  
+   
+}
+.product-card img {
+    width: 100%;
+    border-radius: 20px;
+  
+}
+.product-card .hover-img {
+    position: absolute;
+    top: 5;
+    right: 5;
+    left: 0;
+    padding: 15px;
+    align-content: center;
+    width: 100%;
+    height: 70%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.product-card:hover .hover-img {
+    opacity: 1;
+}
+.product-card:hover img:first-child {
+    opacity: 0;
+}
+.badge-custom {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.product-card:hover .icons {
+    opacity: 1;
+}
+.badge-custom {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    z-index: 1;
+
+}
+span{
+    margin:12px;
 }
